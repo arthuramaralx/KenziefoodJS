@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <!-- <link rel="stylesheet" href="./src/style/reset.css"> -->
+    <title>Kenzie Food</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/style/style.css">
-  <!-- <link rel="stylesheet" href="./src/style/reset.css"> -->
-  <title>Kenzie Food</title>
-</head>
+  <body>
+    <header>
+      <img
+        src="./src/favicons/icon_kenzie.png"
+        alt="logo-kenzie-food"
+        class="icon-logo"
+      />
 
-<body>
-  <header>
-    <img src="./src/favicons/icon_kenzie.png" alt="logo-kenzie-food" class="icon-logo">
+      <div>
+        <img
+          src="./src/favicons/search.png"
+          alt="search-icon"
+          class="icon-search"
+        />
+        <input
+          type="text"
+          class="input-search"
+          name="search"
+          placeholder="Pesquisar por produto"
+        />
+      </div>
+    </header>
 
-    <div>
-      <img src="./src/favicons/search.png" alt="search-icon" class="icon-search">
-      <input type="text" class="input-search" name="search" placeholder="Pesquisar por produto">
-    </div>
-  </header>
+    <nav class="nav-container">
+      <button class="all-products">Todos</button>
+      <button class="bakery-products">
+        <img src="./src/favicons/icon_bread.png" alt="icon_bread-bakery" />
+        Panificadora
+      </button>
+      <button class="fruits-products">
+        <img src="./src/favicons/icon_fruit.png" alt="icon-fruits" />
+        Frutas
+      </button>
+      <button class="drinks-products">
+        <img src="./src/favicons/icon_wine.png" alt="icon-wine-drinks" />
+        Bebidas
+      </button>
+    </nav>
 
-  <nav class="nav-container">
+    <aside class="card-container">
+      <section class="card-header">
+        <img src="./src/favicons/icon_card.png" alt="icon-card-header" />
+        Carrinho
+      </section>
 
-    <button class="all-products">
-      Todos
-    </button>
-    <button class="bakery-products">
-      <img src="./src/favicons/icon_bread.png" alt="icon_bread-bakery">
-      Panificadora
-    </button>
-    <button class="fruits-products">
-      <img src="./src/favicons/icon_fruit.png" alt="icon-fruits">
-      Frutas
-    </button>
-    <button class="drinks-products">
-      <img src="./src/favicons/icon_wine.png" alt="icon-wine-drinks">
-      Bebidas
-    </button>
-  </nav>
+      <section class="card-body">
+        Por enquanto não temos produtos no carrinho
+      </section>
 
-  <aside class="card-container">
-    <section class="card-header">
-      <img src="./src/favicons/icon_card.png" alt="icon-card-header">
-      Carrinho
-    </section>
-    
-    <section class="card-body">
-      Por enquanto não temos produtos no carrinho
-    </section>
-    
-    <section class="amount-products"> 
-      <div>Quantidade</div>
-      <div>10</div>
-    </section>
+      <section class="amount-products">
+        <div>Quantidade</div>
+        <div>10</div>
+      </section>
 
-    <section class="price-all-products"> 
-      <div>Total</div>
-      <div>R$ 100,00</div>
-    </section>
+      <section class="price-all-products">
+        <div>Total</div>
+        <div>R$ 100,00</div>
+      </section>
 
-      <ul class="template-card-products">
+      <ul class="template-card-products"></ul>
+    </aside>
 
-      </ul>
-  </aside>
-  
-
-  <ul class="template-container">
-
-  </ul>
-
-</body>
-
+    <ul class="template-container"></ul>
+  </body>
 </html>
