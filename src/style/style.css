@@ -3,6 +3,8 @@ body{
     padding: 0;
 }
 
+@media (min-width: 1000px) {
+    
 header {
     display: flex;
     justify-content: space-between;
@@ -167,7 +169,7 @@ header .icon-search {
 
 .template-container{
     display: flex;
-    max-width: 70%;
+    max-width: 1200px;
     margin-left: 105px;
 }
 
@@ -179,6 +181,7 @@ header .icon-search {
     list-style: none;
 
     margin-top: 50px;
+
 }
 
 .template-container ul li{
@@ -188,12 +191,12 @@ header .icon-search {
     width: 303px;
     height: 397px;
 
-    
     flex-wrap: wrap;
     flex-direction: row;
 
     list-style: none;
-    
+
+    border: none;
 }
 
 .template-container ul li .img-item {
@@ -206,6 +209,8 @@ header .icon-search {
 
 .template-container ul li:hover .img-item {
     border: 3px solid #FF2253;
+    box-sizing: border-box;
+
 }
 
 .template-container ul li h2 {
@@ -237,9 +242,11 @@ header .icon-search {
 
 .template-container ul li div img {
     background-color:#E4F7EF;
-    margin-top: 18px;
-    height: 15.2px;
-    width: 15.2px;
+    margin-top: 10px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
     
 }
 
@@ -253,4 +260,4 @@ header .icon-search {
     font-weight: bold;
     line-height: 20px;
 }
-
+}
