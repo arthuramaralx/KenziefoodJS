@@ -2,11 +2,7 @@ import { Template } from "../models/Templates.js";
 import { Api } from "../api/Api.js";
 
 
-const testUl = document.querySelector('.template-container')
-const carrinhoUl = document.querySelector('.cart-products')
-console.log(carrinhoUl)
+// const products = await Api.getPublicProducts()
 
-const x = await Api.getPublicProducts()
-console.log(x)
-Template.createTemplate(x, testUl)
-Template.cartTemplate(x,carrinhoUl)
+// Template.createTemplate(products, testUl)
+// Template.cartTemplate(products,carrinhoUl)
