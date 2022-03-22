@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <!-- <link rel="stylesheet" href="./src/style/reset.css"> -->
+    <title>Kenzie Food</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/style/style.css">
-  <!-- <link rel="stylesheet" href="./src/style/reset.css"> -->
-  <title>Kenzie Food</title>
-</head>
+  <body>
+    <header>
+      <img
+        src="./src/favicons/icon_kenzie.png"
+        alt="logo-kenzie-food"
+        class="icon-logo"
+      />
 
-<body>
-  <header>
-    <img src="./src/favicons/icon_kenzie.png" alt="logo-kenzie-food" class="icon-logo">
+      <div>
+        <img
+          src="./src/favicons/search.png"
+          alt="search-icon"
+          class="icon-search"
+        />
+        <input
+          type="text"
+          class="input-search"
+          name="search"
+          placeholder="Pesquisar por produto"
+        />
+      </div>
+    </header>
 
-    <div>
-      <img src="./src/favicons/search.png" alt="search-icon" class="icon-search">
-      <input type="text" class="input-search" name="search" placeholder="Pesquisar por produto">
-    </div>
-  </header>
-
-  <nav class="nav-container">
-
-    <button class="all-products">
-      Todos
-    </button>
-    <button class="bakery-products">
-      <img src="./src/favicons/icon_bread.png" alt="icon_bread-bakery">
-      Panificadora
-    </button>
-    <button class="fruits-products">
-      <img src="./src/favicons/icon_fruit.png" alt="icon-fruits">
-      Frutas
-    </button>
-    <button class="drinks-products">
-      <img src="./src/favicons/icon_wine.png" alt="icon-wine-drinks">
-      Bebidas
-    </button>
-  </nav>
+    <nav class="nav-container">
+      <button class="all-products">Todos</button>
+      <button class="bakery-products">
+        <img src="./src/favicons/icon_bread.png" alt="icon_bread-bakery" />
+        Panificadora
+      </button>
+      <button class="fruits-products">
+        <img src="./src/favicons/icon_fruit.png" alt="icon-fruits" />
+        Frutas
+      </button>
+      <button class="drinks-products">
+        <img src="./src/favicons/icon_wine.png" alt="icon-wine-drinks" />
+        Bebidas
+      </button>
+    </nav>
 
   <aside class="card-container">
     <section class="card-header">
@@ -65,6 +74,7 @@
     </section>
   </aside>
 
+
   <div class="template-container">
     <ul>
       <li>
@@ -82,115 +92,10 @@
             <img src="./src/favicons/Text.png" alt="img-card" class="img-card">
           </div>
         </div>
-
       </li>
+    </ul>
+   </div>
 
-      <li>
-        <img src="./src/favicons/img-teste.png" alt="img-teste" class="img-item">
-        <h2>Panqueca de banana com aveia</h2>
-        <span class="span-resume">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-          se não tiver outra opção de café.
-          Se tiver mais comida, como pães e frutas.
-        </span>
-        <span class="span-filter">Padaria</span>
-
-        <div>
-          <p>R$ 20,00</p> 
-          <div>
-            <img src="./src/favicons/Text.png" alt="img-card" class="img-card">
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <img src="./src/favicons/img-teste.png" alt="img-teste" class="img-item">
-        <h2>Panqueca de banana com aveia</h2>
-        <span class="span-resume">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-          se não tiver outra opção de café.
-          Se tiver mais comida, como pães e frutas.
-        </span>
-        <span class="span-filter">Padaria</span>
-
-        <div>
-          <p>R$ 20,00</p>
-          <div>
-          <img src="./src/favicons/Text.png" alt="img-card" class="img-card">
-        </div>
-  </div>
-  </li>
-
-  <li>
-    <img src="./src/favicons/img-teste.png" alt="img-teste" class="img-item">
-    <h2>Panqueca de banana com aveia</h2>
-    <span class="span-resume">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-      se não tiver outra opção de café.
-      Se tiver mais comida, como pães e frutas.
-    </span>
-    <span class="span-filter">Padaria</span>
-
-    <div>
-      <p>R$ 20,00</p>
-      <div>
-        <img src="./src/favicons/Text.png" alt="img-card" class="img-card">
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <img src="./src/favicons/img-teste.png" alt="img-teste" class="img-item">
-    <h2>Panqueca de banana com aveia</h2>
-    <span class="span-resume">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-      se não tiver outra opção de café.
-      Se tiver mais comida, como pães e frutas.
-    </span>
-    <span class="span-filter">Padaria</span>
-
-    <div>
-      <p>R$ 20,00</p>
-      <div>
-        <img src="./src/favicons/Text.png" alt="img-card" class="img-card">
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <img src="./src/favicons/img-teste.png" alt="img-teste" class="img-item">
-    <h2>Panqueca de banana com aveia</h2>
-    <span class="span-resume">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-      se não tiver outra opção de café.
-      Se tiver mais comida, como pães e frutas.
-    </span>
-    <span class="span-filter">Padaria</span>
-
-    <div>
-      <p>R$ 20,00</p>
-      <div>
-        <img src="./src/favicons/Text.png" alt="img-card" class="img-card">
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <img src="./src/favicons/img-teste.png" alt="img-teste" class="img-item">
-    <h2>Panqueca de banana com aveia</h2>
-    <span class="span-resume">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-      se não tiver outra opção de café.
-      Se tiver mais comida, como pães e frutas.
-    </span>
-    <span class="span-filter">Padaria</span>
-
-    <div>
-      <p>R$ 20,00</p>
-      <div class="card">
-        <img src="./src/favicons/Text.png" alt="img-card" class="img-card">
-      </div>
-    </div>
-  </li>
-
-  </ul>
-
-  </div>
-
-</body>
-
+    <script src="src/script/script.js" type="module"></script>
+  </body>
 </html>
