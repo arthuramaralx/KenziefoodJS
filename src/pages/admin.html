@@ -4,35 +4,173 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/admin.css">
     <title>Kenzie Food - Admin</title>
 </head>
 <body>
-    <header>
-        <img src="../" alt="logo-kenzie-food" class="icon-logo">
-    
-        <div>
-          <img src="./favicons/search.png" alt="search-icon" class="icon-search">
-          <input type="text" class="input-search" name="search" placeholder="Pesquisar por produto">
-        </div>
-    </header>
-    
-      <nav class="nav-container">
-    
-        <button class="all-products">
-          Todos
-        </button>
-        <button class="bakery-products">
-          <img src="./favicons/icon_bread.png" alt="icon_bread-bakery">
-          Panificadora
-        </button>
-        <button class="fruits-products">
-          <img src="./favicons/icon_fruit.png" alt="icon-fruits">
-          Frutas
-        </button>
-        <button class="drinks-products">
-          <img src="./favicons/icon_wine.png" alt="icon-wine-drinks">
-          Bebidas
-        </button>
-      </nav>
+  <header>
+    <img src="../favicons/icon_kenzie.png" alt="logo-kenzie-food" class="icon-logo">
+    <div>
+      <img src="../favicons/search.png" alt="search-icon" class="icon-search">
+      <input type="text" class="input-search" name="search" placeholder="Pesquisar por produto">
+    </div>
+    <img src="../favicons/icon_user.png" alt="user-icon" class="icon-user">
+  </header>
+
+  <nav class="nav-container">
+
+    <button class="all-products">
+      Todos
+    </button>
+    <button class="bakery-products">
+      <img src="../favicons/icon_bread.png" alt="icon_bread-bakery">
+      Panificadora
+    </button>
+    <button class="fruits-products">
+      <img src="../favicons/icon_fruit.png" alt="icon-fruits">
+      Frutas
+    </button>
+    <button class="drinks-products">
+      <img src="../favicons/icon_wine.png" alt="icon-wine-drinks">
+      Bebidas
+    </button>
+    <button class="add-products">
+      Adicionar novo produto
+    </button>
+
+  </nav>
+
+  <main id="products">
+    <section id="list-products">
+      <ul class="menu-product-table">
+          <li class="products-table" id="grey-text">Produtos</li>
+          <li class="products-categoria" id="grey-text">Categorias</li>
+          <li class="products-descricao" id="grey-text">Descrição</li>
+          <li class="products-acoes" id="grey-text">Ações</li>
+      </ul>
+
+      <ul class="table-products">
+         <li class="products-table"><img src="../favicons/icon_panqueca.png"><p>Panqueca de banana com aveia</p></li>
+         <li class="products-categoria" id="grey-text">bebidas frutas</li>
+         <li class="products-descricao"id="grey-text" >Esta receita serve muito bem 2 pessoas...</li>
+         <li class="products-acoes"><img src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li>
+     </ul>  
+     
+     <ul class="table-products">
+         <li class="products-table"><img src="../favicons/icon_panqueca.png"><p>Panqueca de banana com aveia</p></li>
+         <li class="products-categoria" id="grey-text">bebidas frutas</li>
+         <li class="products-descricao" id="grey-text">Esta receita serve muito bem 2 pessoas...</li>
+         <li class="products-acoes"><img src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li>
+     </ul> 
+
+    </section>
+  </main>
+
+  <!--  MODAL ADICIONAR PRODUTO -->
+
+  <div class="modalInvi" id="modalProduto">
+
+    <div class="header-Modal">
+      <p>Cadastro de produto</p>
+      <button id="btnClose">X</button>
+    </div>
+
+    <form action="#">
+      <label for="nome">Nome do produto</label>
+      <input type="text" name="nome" required placeholder="Digitar o nome">
+      <label for="descricao">Descrição</label>
+      <textarea name="descricao" required>Digite a descrição</textarea>
+      <label for="categoria">Categorias</label>
+      <div name="categoria">
+      </div>
+      <label for="preco">Valor do Produto</label>
+      <input type="number" name="preco" required placeholder="Digite o valor aqui">
+      <label for="imagem">Link da imagem</label>
+      <input type="url" name="imagem" required placeholder="Inserir link">
+      <button>Cadastrar Produto</button>
+    </form>
+
+  </div>
+
+
+  <!-- MODAL EDITAR PRODUTO -->
+
+  <div class="modalInvi" id="modalEditarProduto">
+
+    <div class="header-Modal">
+      <p>Edição de produto</p>
+      <button id="btnClose">X</button>
+    </div>
+
+    <form action="#">
+
+      <label for="nome">Nome do produto</label>
+      <input type="text" name="nome" required placeholder="Digitar o nome">
+      <label for="descricao">Descrição</label>
+      <textarea name="descricao" required>Digite a descrição</textarea>
+      <label for="categoria">Categorias</label>
+      <div name="categoria">
+      </div>
+      <label for="preco">Valor do Produto</label>
+      <input type="number" name="preco" required placeholder="Digite o valor aqui">
+      <label for="imagem">Link da imagem</label>
+      <input type="url" name="imagem" required placeholder="Inserir link">
+      <div class="modalFooter">
+          <button id="btn-exclude">Excluir</button>
+          <button id="btn-save">Salvar alterações</button>
+      </div>
+    </form>
+
+  </div>
+
+  <!--  MODAL EXCLUSÃO DE PRODUTO -->
+  <div class="modalInvi" id="modalExcluirProduto">
+      <div class="header-Modal">
+          <p>Exclusão de produto</p>
+          <button id="btnClose">X</button>
+      </div>
+      <div class="bodyModal">
+          <p>Tem certeza que deseja excluir esse produto?</p>
+      </div>
+      <div class="modalFooter">
+          <button id="btn-yes">Sim</button>
+          <button id="btn-no">Não</button>
+      </div>
+
+  </div>
+
+
+  <!-- MODAL STATUS BEM SUCEDIDO -->
+
+  <div class="modalInvi" id="modalStatusSucesso">
+
+    <div class="header-Modal">
+      <p>Status</p>
+      <button id="btnClose">X</button>
+    </div>
+    <div class="body-sucess-status">
+      <p>
+        Produto adicionado com sucesso
+      </p>
+    </div>
+
+  </div>
+
+  <!-- MODAL STATUS MALSUCEDIDO  -->
+
+  <div class="modalInvi" id="modalStatusFalha">
+
+      <div class="header-Modal">
+          <p>Status</p>
+          <button id="btnClose">X</button>
+      </div>
+      <div class="body-fail-status">
+          <p>
+              Ocorreu algum erro, o produto não foi adicionado
+          </p>
+      </div>
+  </div>
+      
 </body>
 </html>
