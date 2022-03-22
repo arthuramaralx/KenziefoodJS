@@ -34,8 +34,8 @@ export class Template {
       <p>${nome}</p>
       <span>${categoria}</span>
       <p>${preco.toFixed(2)}</p>
-      `
       showCase.appendChild(liProducts)
+      `g
     })
 
   }
