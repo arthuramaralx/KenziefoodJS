@@ -79,14 +79,16 @@ export class ControllerCart {
     }
 
     static updatePrice() {
-        let localStorageProducts = JSON.parse(localStorage.getItem("usuarioProdutos")) 
-        let arrayProductPrices = []
-        localStorageProducts.forEach((products)=> arrayProductPrices.push(products.preco))
-        let totalPrice = arrayProductPrices.reduce((x,y)=>  x+y)
-        let quantity = localStorageProducts.length
-        let cartInfo = {}
-        cartInfo = {totalPrice, quantity}
-        return cartInfo
+        if(localStorage.length > 1){
+            let localStorageProducts = JSON.parse(localStorage.getItem("usuarioProdutos")) 
+            let arrayProductPrices = []
+            localStorageProducts.forEach((products)=> arrayProductPrices.push(products.preco))
+            let totalPrice = arrayProductPrices.reduce((x,y)=>  x+y)
+            let quantity = localStorageProducts.length
+            let cartInfo = {}
+            cartInfo = {totalPrice, quantity}
+            return cartInfo
+        }
     }
 
 }

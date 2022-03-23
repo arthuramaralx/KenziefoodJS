@@ -1,5 +1,6 @@
 export class Template {
   static async createTemplate(array, showCase) {
+    showCase.innerHTML = ""
     array.forEach((item) => {
       const { categoria, descricao, id, imagem, nome, preco } = item
       const liProducts = document.createElement('li')
