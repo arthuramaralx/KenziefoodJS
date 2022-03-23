@@ -1,10 +1,12 @@
+import { Api } from "../api/Api.js";
+
 export class ControllerLogin {
-  static main = document.querySelector("main");
+  static main = document.querySelector(".main-login");
 
   static observerLogin() {
     this.main.addEventListener("submit", this.getFormData);
   }
-  static getFormData(event) {
+  static async getFormData(event) {
     event.preventDefault();
 
     const dataLogin = {};
@@ -15,6 +17,13 @@ export class ControllerLogin {
         dataLogin[inputs[i].name] = inputs[i].value;
       }
     }
-    window.location.href = "./admin.html";
+    const result = await Api.loginApi(dataLogin);
+    if (result.status == "Error") {
+      alert("Usuario nao encontrado");
+    } else {
+      localStorage.clear();
+      localStorage.setItem("tokenUsuario", result);
+      window.location.href = "./admin.html";
+    }
   }
 }

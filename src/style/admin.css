@@ -1,0 +1,752 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+body, * {
+    font-family: "Poppins", sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+    padding-inline-start: 0px;
+}
+
+#header-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px -10px rgb(0 0 0 / 25%);
+    height: 72px;
+    margin-top: -10px;
+    padding: 10px;
+}
+
+#pesquisar{
+    display: flex;
+    align-items: center;
+
+}
+
+#btn-pesquisar{
+    margin-right: 34px;
+     padding: 10px 18px 10px 16px; 
+    background: #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.user-foto{
+    margin-right: 118px;
+    width: 36px;
+    height: 36px;
+    border-radius: 128.571px;
+}
+
+
+.btns-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 2% ;
+}
+
+#btn-filtros{
+    display: flex;
+    flex-wrap: wrap;
+}
+#btn-filtros li{
+    padding: 3px;
+}
+
+#btn-todos{
+    color: #FFFFFF;    
+    padding: 10px;
+    border-radius: 32px;    
+    background-color: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+}
+
+#btn-panificadora{
+    color: #212529;
+    padding: 10px;
+    border-radius: 32px;   
+    background-color: #F3EEF5;
+    border: 1.5px solid #FFF7F4;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#btn-frutas{
+    color: #212529;
+    padding: 10px;
+    border-radius: 32px;  
+    background-color: #F3EEF5;
+    border: 1.5px solid #FFF7F4;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#btn-bebidas{
+    color: #212529;
+    padding: 10px;
+    border-radius: 32px;  
+    background-color: #F3EEF5;
+    box-sizing: border-box;
+    border: 1.5px solid #FFF7F4;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#novo-produto{
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 32px;
+    background-color: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+}
+.icons-btn{
+    margin-right: 10px;
+}
+#listar-produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.menu-tabela-produtos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center; 
+    padding-bottom: 1%;
+}
+.tabela-produtos{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 12px; 
+    margin-bottom: 1%;   
+}
+
+
+.produtos-tabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    width: 25%;
+}
+.produtos-tabela p{
+    margin-left: 20px;
+}
+.produtos-categorias{
+    text-align: start;
+    width: 25%;
+
+}
+.produtos-descricao{
+    text-align: start;
+    width: 25%;
+
+}
+.produtos-acoes{
+    text-align: start;
+    width: 10%;
+
+}
+
+
+
+
+/* mobile */
+/*  @media only screen and (min-width: 410px) {
+        .produtos-tabela{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: start;
+        width: 25%;
+    }
+};  */
+/* tablets */
+/*  @media only screen and (min-width: 768px) {
+};  */
+
+
+/* desktop */
+@media  (min-width: 1024px) {
+    .produtos-tabela{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: start;
+        width: 25%;
+    }
+    #logo-dashboard{
+        margin-left: 117px; 
+   }
+    #novo-produto{
+        margin-right: 118px;
+        padding: 15px 20px 15px 20px;
+    }
+
+    #div-filtros{
+        margin-left: 100px; 
+    }
+    #btn-filtros li button{
+        margin-right: 28px; 
+    }
+    #btn-todos{
+        padding: 15px 20px 15px 20px;
+    }
+    #btn-panificadora{
+        padding: 15px 20px 15px 20px;
+    }
+    #btn-frutas{
+        padding: 15px 20px 15px 20px;
+    }
+    #btn-bebidas{
+        padding: 15px 20px 15px 20px;
+    }
+
+    .btns-dashboard{
+        display: flex;
+        justify-content: space-between;        
+        padding-bottom: 2% ;
+        padding-top: 1%;
+    }
+
+
+}; 
+
+.modalStatus {
+    display: non;
+    width: 
+}
+
+#modalStatusSucesso, #modalStatusFalha {
+    display: none;
+    width: 1px;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 700px;
+    width: 500px;
+}
+
+.header-Modal {
+    font-weight: 500;
+    align-items: center;
+    font-family: Poppins;
+    background-color: #F8F9FA;
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 28px 20px 28px;
+    border-radius: 8px 8px 0px 0px;
+    font-size: 14px;
+}
+
+#btnClose {
+    width: 30px;
+    height: 30px;
+    background-color: #E9ECEF;
+    border-style: none;
+    border-radius: 4px;
+    color: #868E96;
+    font-family: Inter;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.body-sucess-status {
+    border-bottom: #39DF8F 10px solid;
+}
+
+.body-fail-status {
+    border-bottom: #FF2253 10px solid;
+}
+
+.body-fail-status, .body-sucess-status {
+    height: 65px;
+    width: 500px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.body-fail-status, .body-sucess-status > p {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: Poppins;
+    font-weight: 400;
+    color: #212529;
+    font-size: 14px;
+}
+
+table {
+border-collapse: collapse;
+}
+
+table tr {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+width: 1370px;
+height: 62px;
+}
+
+.tr-info {
+font-family: "Poppins";
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+color: #868e96;
+}
+
+#tr-info td span {
+margin-left: 20px;
+background-color: red;
+}
+
+.td-produto img,
+#info-produto span,
+#info-categoria span,
+#info-descricao span,
+#info-acao span {
+padding-left: 20px;
+}
+
+#info-produto,
+.td-produto {
+width: 331px;
+}
+
+#info-categoria,
+.td-categoria {
+width: 459px;
+}
+
+#info-descricao,
+.td-descricao {
+width: 452px;
+}
+
+#info-acao,
+.td-acao {
+width: 128px;
+}
+
+.tr-list {
+background: #ffffff;
+border: 1px solid #e9ecef;
+box-sizing: border-box;
+border-radius: 12px;
+margin-bottom: 20px;
+}
+
+.td-produto {
+display: flex;
+align-items: center;
+}
+
+.td-produto span {
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+color: #212529;
+margin-left: 24px;
+}
+
+.td-categoria {
+display: flex;
+}
+
+.td-categoria span {
+display: flex;
+align-items: center;
+
+font-family: "Poppins";
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #868e96;
+
+height: 27px;
+background: #f8f9fa;
+border-radius: 8px;
+
+margin-left: 9px;
+padding: 0 10px;
+}
+
+.td-categoria span:nth-child(1) {
+margin-left: 20px;
+}
+
+.td-descricao {
+display: flex;
+}
+
+.td-descricao span {
+font-family: "Poppins";
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+color: #868e96;
+padding-left: 20px;
+}
+
+.td-acao {
+display: flex;
+}
+
+.td-acao span {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 38px;
+height: 38px;
+margin-left: 15px;
+}
+
+.td-acao span img {
+width: 13px;
+height: 15px;
+}
+
+/* 
+@media (min-width: 375px) and (max-width: 759px) {
+main {
+    margin-left: 18px;
+    position: static;
+    width: 1370px;
+}
+#filtro-add {
+    display: flex;
+}
+#filtro-add {
+    display: flex;
+}
+#filtro-add button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#filtro-add img {
+    width: 19px;
+    height: 19px;
+    margin: 0 15px 0 20px;
+}
+.section-vitrine {
+}
+} */
+
+
+/* --- ESTILIZACAO MODAL --- */
+
+.modal-cadastro {
+display: none;
+}
+
+.modal-edicao {
+display: none;
+}
+
+.modal-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-content {
+    margin: 10% auto;
+    width: 90%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding: 0 28px 0 28px;
+    background-color: #F8F9FA;
+}
+
+.modal-header h2 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.close-modal {
+    font-size: 15px;
+    font-weight: 400;
+    color: #868E96;
+    padding: 5px 11px;
+    background-color: #E9ECEF;
+    border-radius: 4px;
+}
+
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.form-modal-container {
+    padding: 10px 20px;
+    background: #fff;
+}
+
+.form-modal-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #212529;
+    padding: 17px 0 10px 0;
+}
+
+.form-input {
+    width: 90%;
+    height: 31px;
+    padding-left: 10px;
+    font-size: 16px;
+    background-color: #F8F9FA;
+    border: 1.5px solid #DEE2E6;
+    border-radius: 7px;
+}
+
+.textarea-desc {
+    height: 45px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.label-categorias {
+    padding: 18px 0 18px 0;
+}
+
+.input-categorias {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-checkbox {
+    padding: 6.5px 26px;
+    width: 136px;
+    margin-bottom: 11px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #868E96;
+    background-color: #F8F9FA;
+    border-radius: 32px;
+}
+
+.input-checkbox1, .input-checkbox2, .input-checkbox3 {
+position: absolute;
+opacity: 0%;
+}
+
+.input-checkbox1 {
+margin-top: 7px;
+margin-left: 9px;
+width: 200px;
+}
+
+.input-checkbox2 {
+margin-top: 45px;
+margin-left: 9px;
+width: 200px;
+}
+
+.input-checkbox3 {
+margin-top: 82px;
+margin-left: 9px;
+width: 200px;
+}
+
+.input-checkbox1:hover, .input-checkbox2:hover, .input-checkbox3:hover {
+cursor: pointer;
+}
+
+.input-checkbox1:checked + .label-checkbox {
+color: #F8F9FA;
+background-color: #FF2253;
+}
+
+.input-checkbox2:checked + .label-checkbox {
+color: #F8F9FA;
+background-color: #FF2253;
+}
+
+.input-checkbox3:checked + .label-checkbox {
+color: #F8F9FA;
+background-color: #FF2253;
+}
+
+.btnForm-cadastro, .btnForm-excluir {
+width: 92%;
+height: 39px;
+margin-top: 20px;
+background-color: #FF2253;
+font-size: 16px;
+color: #F8F9FA;
+border: 1.5px solid #FF2253;
+border-radius: 32px;
+}
+
+.btnForm-cadastro:hover, .btnForm-excluir:hover {
+cursor: pointer;
+}
+
+.btnForm-excluir {
+margin-top: 12px;
+background-color: #F8F9FA;
+color: #868E96;
+border: none;
+}
+
+
+@keyframes modalopen {
+from {
+    opacity: 0;
+}
+
+to {
+    opacity: 1;
+}
+}
+
+
+@media (min-width: 770px) {
+
+.modal-content {
+    width: 496px;
+}
+
+.modal-header {
+    height: 4rem;
+}
+
+.form-modal-container form {
+    width: 495px;
+}
+
+.form-label {
+    padding-top: 32px;
+}
+
+.textarea-desc {
+    font-size: 15px;
+    padding-top: 8px;
+}
+
+.form-input {
+    height: 43px;
+    width: 88%;
+}
+
+.input-categorias {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 416.25px;
+    height: 42px;
+    
+}
+
+.label-checkbox {
+    width: 80px;
+}
+
+.input-checkbox1 {
+    margin-left: 4px;
+    width: 125px;
+}
+
+.input-checkbox2 {
+    margin-top: 8px;
+    margin-left: 145px;
+    width: 126px;
+}
+
+.input-checkbox3 {
+    margin-top: 8px;
+    margin-left: 288px;
+    width: 126px;
+}
+
+.valor-produto-desktop {
+    padding-top: 13px;
+}
+
+.btnForm-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.btnForm-excluir {
+    width: 192px;
+}
+
+.btnForm-cadastro {
+    width: 240px;
+}
+
+.btn-cadastro-desktop {
+    width: 92%;
+}
+  
+} 
