@@ -10,140 +10,135 @@
 </head>
 <body>
   <header>
-    <img src="../favicons/icon_kenzie.png" alt="logo-kenzie-food" class="icon-logo">
+    <nav id="header-top">
+        <section id="logo-dashboard">
+            <img src="../favicons/icon_kenzie.png">
+        </section>
+
+        <section id="pesquisar">
+          <form>
+              <input type="text" placeholder="Pesquisar por um produto" id="btn-pesquisar">                    
+          </form>
+          <img src="../favicons/icon_user.png" class = "user-foto">
+        </section>
+    </nav>
+</header>
+
+<section class="btns-dashboard">
+    <div id="div-filtros">
+        <ul id="btn-filtros">
+            <li><button id="btn-todos">Todos</button></li>
+            <li><button id="btn-panificadora"><img class="icons-btn" src="../favicons/icon_bread.png"> Panificadora</button></li>
+            <li><button id="btn-frutas"><img class="icons-btn" src="../favicons/icon_fruit.png"> Frutas</button></li>
+            <li><button id="btn-bebidas"><img class="icons-btn" src="../favicons/icon_wine.png"> Bebidas</button></li>
+        </ul>
+    </div>
+
     <div>
-      <img src="../favicons/search.png" alt="search-icon" class="icon-search">
-      <input type="text" class="input-search" name="search" placeholder="Pesquisar por produto">
+        <ul>
+            <li><button id="novo-produto">Adicionar novo produto</button></li>
+        </ul>
     </div>
-    <img src="../favicons/icon_user.png" alt="user-icon" class="icon-user">
-  </header>
+</section>
 
-  <nav class="nav-container">
+ <section id="listar-produtos">
+     <ul class="menu-tabela-produtos">
+         <li class="produtos-tabela">Produtos</li>
+         <li class="produtos-categorias">Categorias</li>
+         <li class="produtos-descricao">Descrição</li>
+         <li class="produtos-acoes">Ações</li>
+     </ul>
 
-    <button class="all-products">
-      Todos
-    </button>
-    <button class="bakery-products">
-      <img src="../favicons/icon_bread.png" alt="icon_bread-bakery">
-      Panificadora
-    </button>
-    <button class="fruits-products">
-      <img src="../favicons/icon_fruit.png" alt="icon-fruits">
-      Frutas
-    </button>
-    <button class="drinks-products">
-      <img src="../favicons/icon_wine.png" alt="icon-wine-drinks">
-      Bebidas
-    </button>
-    <button class="add-products">
-      Adicionar novo produto
-    </button>
+     <ul class="tabela-produtos">
+        <li class="produtos-tabela"><img src="../favicons/icon_panqueca.png"><p>Panqueca de banana com aveia</p></li>
+        <li class="produtos-categorias">bebidas frutas</li>
+        <li class="produtos-descricao">esta receita serve muito bem 2 pessoas...</li>
+        <li class="produtos-acoes"><img src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li>
+    </ul>  
+    
+    <ul class="tabela-produtos">
+        <li class="produtos-tabela"><img src="../favicons/icon_panqueca.png"><p>Panqueca de banana com aveia</p></li>
+        <li class="produtos-categorias">bebidas frutas</li>
+        <li class="produtos-descricao">esta receita serve muito bem 2 pessoas...</li>
+        <li class="produtos-acoes"><img src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li>
+    </ul> 
 
-  </nav>
+</section>
+</main>
 
-  <main id="products">
-    <section id="list-products">
-      <ul class="menu-product-table">
-          <li class="products-table" id="grey-text">Produtos</li>
-          <li class="products-categoria" id="grey-text">Categorias</li>
-          <li class="products-descricao" id="grey-text">Descrição</li>
-          <li class="products-acoes" id="grey-text">Ações</li>
-      </ul>
-
-      <ul class="table-products">
-         <li class="products-table"><img src="../favicons/icon_panqueca.png"><p>Panqueca de banana com aveia</p></li>
-         <li class="products-categoria" id="grey-text">bebidas frutas</li>
-         <li class="products-descricao"id="grey-text" >Esta receita serve muito bem 2 pessoas...</li>
-         <li class="products-acoes"><img src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li>
-     </ul>  
-     
-     <ul class="table-products">
-         <li class="products-table"><img src="../favicons/icon_panqueca.png"><p>Panqueca de banana com aveia</p></li>
-         <li class="products-categoria" id="grey-text">bebidas frutas</li>
-         <li class="products-descricao" id="grey-text">Esta receita serve muito bem 2 pessoas...</li>
-         <li class="products-acoes"><img src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li>
-     </ul> 
-
-    </section>
-  </main>
-
-  <!--  MODAL ADICIONAR PRODUTO -->
-
-  <div class="modalInvi" id="modalProduto">
-
-    <div class="header-Modal">
-      <p>Cadastro de produto</p>
-      <button id="btnClose">X</button>
+<div class="modal-container modal-cadastro">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Cadastro de produto</h2>
+      <span class="close-modal">&times;</span>
     </div>
+    <div class="form-modal-container">
+      <form action="">
+        <label for="nomeProduto" class="form-label">Nome do Produto</label>
+        <input type="text" name="nomeProduto" class="form-input" placeholder="Digitar o nome">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea name="descricao" cols="30" rows="10" class="form-input textarea-desc"
+          placeholder="Digitar a descrição"></textarea>
+        <label for="categorias" class="form-label">Categorias</label>
+        <div class="input-categorias">
+          <input type="checkbox" name="panificadora" class="input-checkbox1">
+          <label for="panificadora" class="label-checkbox">Panificadora</label>
+          <input type="checkbox" name="frutas" class="input-checkbox2">
+          <label for="frutas" class="label-checkbox">Frutas</label>
+          <input type="checkbox" name="bebidas" class="input-checkbox3">
+          <label for="bebidas" class="label-checkbox">Bebidas</label>
+        </div>
+        <label for="valorProduto" class="form-label valor-produto-desktop">Valor do Produto</label>
+        <input type="number" name="valorProduto" class="form-input" placeholder="Digitar o valor aqui">
+        <label for="imagem" class="form-label">Link da imagem</label>
+        <input type="url" name="imagem" class="form-input" placeholder="Inserir link">
+        <button class="btnForm-cadastro btn-cadastro-desktop">Salvar alterações</button>
+      </form>
 
-    <form action="#">
-      <label for="nome">Nome do produto</label>
-      <input type="text" name="nome" required placeholder="Digitar o nome">
-      <label for="descricao">Descrição</label>
-      <textarea name="descricao" required>Digite a descrição</textarea>
-      <label for="categoria">Categorias</label>
-      <div name="categoria">
-      </div>
-      <label for="preco">Valor do Produto</label>
-      <input type="number" name="preco" required placeholder="Digite o valor aqui">
-      <label for="imagem">Link da imagem</label>
-      <input type="url" name="imagem" required placeholder="Inserir link">
-      <button>Cadastrar Produto</button>
-    </form>
-
-  </div>
-
-
-  <!-- MODAL EDITAR PRODUTO -->
-
-  <div class="modalInvi" id="modalEditarProduto">
-
-    <div class="header-Modal">
-      <p>Edição de produto</p>
-      <button id="btnClose">X</button>
     </div>
-
-    <form action="#">
-
-      <label for="nome">Nome do produto</label>
-      <input type="text" name="nome" required placeholder="Digitar o nome">
-      <label for="descricao">Descrição</label>
-      <textarea name="descricao" required>Digite a descrição</textarea>
-      <label for="categoria">Categorias</label>
-      <div name="categoria">
-      </div>
-      <label for="preco">Valor do Produto</label>
-      <input type="number" name="preco" required placeholder="Digite o valor aqui">
-      <label for="imagem">Link da imagem</label>
-      <input type="url" name="imagem" required placeholder="Inserir link">
-      <div class="modalFooter">
-          <button id="btn-exclude">Excluir</button>
-          <button id="btn-save">Salvar alterações</button>
-      </div>
-    </form>
-
   </div>
+</div>
 
-  <!--  MODAL EXCLUSÃO DE PRODUTO -->
-  <div class="modalInvi" id="modalExcluirProduto">
-      <div class="header-Modal">
-          <p>Exclusão de produto</p>
-          <button id="btnClose">X</button>
-      </div>
-      <div class="bodyModal">
-          <p>Tem certeza que deseja excluir esse produto?</p>
-      </div>
-      <div class="modalFooter">
-          <button id="btn-yes">Sim</button>
-          <button id="btn-no">Não</button>
-      </div>
-
+<div class="modal-container modal-edicao">
+<div class="modal-content">
+  <div class="modal-header">
+      <h2>Edição de produto</h2>
+      <span class="close-modal">&times;</span>
   </div>
+  <div class="form-modal-container">
+      <form action="">
+          <label for="nomeProduto" class="form-label">Nome do Produto</label>
+          <input type="text" name="nomeProduto" class="form-input" placeholder="Digitar o nome">
+          <label for="descricao" class="form-label">Descrição</label>
+          <textarea name="descricao" cols="30" rows="10" class="form-input textarea-desc"
+              placeholder="Digitar a descrição"></textarea>
+
+          <label for="categorias" class="form-label">Categorias</label>
+          <div class="input-categorias">
+              <input type="checkbox" name="panificadora" class="input-checkbox1">
+              <label for="panificadora" class="label-checkbox">Panificadora</label>
+              <input type="checkbox" name="frutas" class="input-checkbox2">
+              <label for="frutas" class="label-checkbox">Frutas</label>
+              <input type="checkbox" name="bebidas" class="input-checkbox3">
+              <label for="bebidas" class="label-checkbox">Bebidas</label>
+          </div>
+          <label for="valorProduto" class="form-label valor-produto-desktop">Valor do Produto</label>
+          <input type="number" name="valorProduto" class="form-input" placeholder="Digitar o valor aqui">
+          <label for="imagem" class="form-label">Link da imagem</label>
+          <input type="url" name="imagem" class="form-input" placeholder="Inserir link">
+          <div class="btnForm-container">
+              <button class="btnForm-cadastro">Salvar alterações</button>
+              <button class="btnForm-excluir">Excluir</button>
+          </div>
+      </form>
+  </div>
+</div>
+</div>
 
 
   <!-- MODAL STATUS BEM SUCEDIDO -->
 
-  <div class="modalInvi" id="modalStatusSucesso">
+  <div class="modalStatus" id="modalStatusSucesso">
 
     <div class="header-Modal">
       <p>Status</p>
@@ -159,17 +154,17 @@
 
   <!-- MODAL STATUS MALSUCEDIDO  -->
 
-  <div class="modalInvi" id="modalStatusFalha">
+  <div class="modalStatus" id="modalStatusFalha">
 
-      <div class="header-Modal">
-          <p>Status</p>
-          <button id="btnClose">X</button>
-      </div>
-      <div class="body-fail-status">
-          <p>
-              Ocorreu algum erro, o produto não foi adicionado
-          </p>
-      </div>
+    <div class="header-Modal">
+        <p>Status</p>
+        <button id="btnClose">X</button>
+    </div>
+    <div class="body-fail-status">
+        <p>
+            Ocorreu algum erro, o produto não foi adicionado
+        </p>
+    </div>
   </div>
       
 </body>
