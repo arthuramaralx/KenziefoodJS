@@ -572,6 +572,9 @@ ul {
     align-items: center;
   }
   .menu-tabela-produtos {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #868e96;
     display: flex;
     width: 90%;
     margin: 0 auto;
