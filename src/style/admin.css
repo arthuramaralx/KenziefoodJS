@@ -235,15 +235,16 @@ ul {
 }
 
 .modal__admin {
-  margin-top: 100px;
-  height: 50vh;
+  /* margin-top: 100px; */
+  /* height: 50vh; */
+  /* position: absolute; */
   background-color: rgba(248, 249, 250, 1);
-
+  width: 315px;
   border-radius: 5px;
 }
 
 .modal__admin > header {
-  background-color: rgba(233, 236, 239, 1);
+  background-color: #f8f9fa;
   height: 10%;
   display: flex;
   justify-content: space-between;
@@ -255,7 +256,7 @@ ul {
 
 .modal__admin > header > button {
   height: fit-content;
-  background-color: rgb(211, 209, 209);
+  background-color: #e9ecef;
   border: 1px solid rgb(173, 173, 173);
   border-radius: 5px;
 }
@@ -265,22 +266,24 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  background-color: #ffffff;
   padding: 15px;
 }
 
 .modal__formulario > label {
   margin-bottom: 0;
   font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #212529;
 }
 
 .modal__formulario > input {
-  background-color: rgba(233, 236, 239, 1);
-  border: 1px solid rgb(163, 164, 165);
+  background-color: #f8f9fa;
+  border: 1.5px solid #dee2e6;
   padding: 5px 2px;
   border-radius: 6px;
 
-  color: rgba(134, 142, 150, 1);
+  color: #868e96;
 }
 
 .modal__formulario > select {
@@ -419,6 +422,22 @@ ul {
 .section__statusConfirmado > p {
   border-bottom: 4px solid green;
 }
+.section__statusConfirmado {
+  /* display: none; */
+  position: fixed;
+  left: 40%;
+  top: 75%;
+  width: 50%;
+  background: #fff;
+}
+.section__statusRecusado {
+  position: fixed;
+  left: 40%;
+  top: 70%;
+  width: 50%;
+  background: #fff;
+}
+
 .section__statusRecusado > p {
   border-bottom: 4px solid rgb(219, 19, 19);
 }
@@ -426,6 +445,11 @@ ul {
 /* DISPLAY DOS MODAIS */
 .sectionModal__cadastroProduto {
   display: none;
+  /* position: absolute; */
+}
+.div-btn-cadastrar-produto {
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav__botoes {
@@ -504,6 +528,16 @@ ul {
   .div-btn-adicionarProduto {
     display: flex;
     justify-content: center;
+  }
+  .section__statusConfirmado {
+    /* display: none; */
+    left: 45%;
+    top: 75%;
+  }
+  .section__statusRecusado {
+    position: fixed;
+    left: 45%;
+    top: 75%;
   }
 }
 
@@ -590,5 +624,23 @@ ul {
   }
   .produtos-descricao {
     width: 100%;
+  }
+  .modal__admin {
+    height: 80%;
+    margin: 6%;
+  }
+  .modal__excluirProduto {
+    height: 35%;
+    margin: 20%;
+  }
+  .section__statusRecusado {
+    position: fixed;
+    left: 46%;
+    top: 82%;
+  }
+  .section__statusConfirmado {
+    /* display: none; */
+    left: 46%;
+    top: 83%;
   }
 }
