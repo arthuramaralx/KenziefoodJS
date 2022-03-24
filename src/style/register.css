@@ -38,3 +38,21 @@ button {
   border-radius: 32px;
   padding: 15px 20px;
 }
+
+.button-register-login{
+width: 250px;
+}
+.modal-login-show {
+
+  font-family: "Poppins", sans-serif;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+background-color: #dee2e6;
+border: 1px solid #868e969d;
+border-radius: 10px;
+}
+
+.modal-login-close {
+  display: none;
+}
