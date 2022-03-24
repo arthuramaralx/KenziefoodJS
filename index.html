@@ -4,7 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;600;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Kenzie Food</title>
   </head>
-  <body></body>
+
+  <body>
+    <header class="header-container">
+      <img
+        src="./src/favicons/icon_kenzie.png"
+        alt="logo-kenzie-food"
+        class="icon-logo"
+      />
+      <button class="adm-button-login">Administrador</button>
+
+      <div>
+        <img
+          src="./src/favicons/search.png"
+          alt="search-icon"
+          class="icon-search"
+        />
+        <input
+          type="text"
+          id="search-input"
+          class="input-search"
+          name="search"
+          placeholder="Pesquisar por produto"
+        />
+      </div>
+    </header>
+    <nav class="nav-container">
+      <button class="all-products">Todos</button>
+      <button class="bakery-products">
+        <img src="./src/favicons/icon_bread.png" alt="icon_bread-bakery" />
+        Panificadora
+      </button>
+      <button class="fruits-products">
+        <img src="./src/favicons/icon_fruit.png" alt="icon-fruits" />
+        Frutas
+      </button>
+      <button class="drinks-products">
+        <img src="./src/favicons/icon_wine.png" alt="icon-wine-drinks" />
+        Bebidas
+      </button>
+    </nav>
+
+    <div class="opacity">
+      <aside class="card-container">
+        <section class="card-header">
+          <img src="./src/favicons/icon_card.png" alt="icon-card-header" />
+          Carrinho
+        </section>
+
+        <ul class="list-products">
+          <figure>
+            <img src="./src/favicons/Frame1.png" alt="" />
+          </figure>
+        </ul>
+
+        <section class="card-body on">
+          <img src="./src/favicons/shopping-bag.png" alt="shopping-bag" />
+          <p>Por enquanto não temos produtos no carrinho</p>
+        </section>
+
+        <section class="amount-products on">
+          <p>Quantidade</p>
+          <p class="products-quantity"></p>
+        </section>
+
+        <section class="price-all-products on">
+          <p>Total</p>
+          <p class="products-price"></p>
+        </section>
+      </aside>
+    </div>
+
+    <div class="template-container">
+      <ul></ul>
+    </div>
+
+    <footer class="card-header-footer">
+      <img src="./src/favicons/icon_card.png" alt="icon-card-header" />
+      Carrinho
+    </footer>
+
+    <script type="module" src="./src/script/script.js"></script>
+  </body>
 </html>
