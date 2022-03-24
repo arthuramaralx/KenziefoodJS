@@ -3,8 +3,10 @@ body{
     padding: 0;
 }
 
-@media (min-width: 1000px) {
-    
+
+@media (min-width: 1000px) {  
+
+
 header {
     display: flex;
     justify-content: space-between;
