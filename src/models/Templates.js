@@ -18,7 +18,7 @@ export class Template {
       <span class="span-filter">${categoria}</span>
       <div>
         <p>R$ ${preco.toFixed(2)}</p>
-        <img src="./src/favicons/icon_card.png" alt="img-card" class="img-card">
+        <img src="./src/favicons/Button_Circle.png" alt="img-card" class="img-card">
       </div>
       
       `;
@@ -50,7 +50,7 @@ export class Template {
 
           <section class="filter-and-price">
             <span class="filter">${categoria}</span>
-            <p class="price">R$ ${preco}</p>
+            <p class="price">R$ ${preco.toFixed(2)}</p>
           </section>
 
           <section class="amount-products-in-card">

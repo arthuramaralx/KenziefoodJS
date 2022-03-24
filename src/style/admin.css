@@ -572,6 +572,7 @@ ul {
     align-items: center;
   }
   .menu-tabela-produtos {
+
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: #868e96;
@@ -642,7 +643,7 @@ ul {
     top: 82%;
   }
   .section__statusConfirmado {
-    /* display: none; */
+
     left: 46%;
     top: 83%;
   }

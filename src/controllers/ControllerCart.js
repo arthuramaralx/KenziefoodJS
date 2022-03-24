@@ -1,5 +1,6 @@
 import { products } from "../script/script.js";
 import { Template } from "../models/Templates.js";
+import { ControllerHome } from "./ControllerHome.js";
 
 let arrayCart = [];
 let verificacao = false;
@@ -23,6 +24,7 @@ export class ControllerCart {
       });
       arrayCart.push(cartProductsTemplate);
       ControllerCart.itensLocal(cartProductsTemplate);
+      ControllerHome.ProductsPriceUpdate();
     }
   }
 
@@ -48,21 +50,28 @@ export class ControllerCart {
   }
 
   static async removeCart(event) {
-    let selectedProduct = event.target.closest("li");
-    let cartUl = event.target.closest("ul").childNodes;
-    let localStorageProducts = JSON.parse(
-      localStorage.getItem("usuarioProdutos")
-    );
+    if (event.target.className === "img-trash") {
+      let selectedProduct =
+        event.target.closest("li").childNodes[1].children[2];
+      let selectedProductTrash = event.target.closest(".img-trash");
+      // console.log(selectedProduct);
+      let cartUl = event.target.closest("ul").childNodes;
 
-    for (let i = 0; i < cartUl.length; i++) {
-      if (selectedProduct == cartUl[i]) {
-        localStorageProducts.splice(i, 1);
+      let localStorageProducts = JSON.parse(
+        localStorage.getItem("usuarioProdutos")
+      );
 
-        localStorage.setItem(
-          "usuarioProdutos",
-          JSON.stringify(localStorageProducts)
-        );
-        Template.cartTemplate(localStorageProducts, ulCarrinho);
+      for (let i = 0; i < cartUl.length; i++) {
+        if (selectedProduct == cartUl[i].childNodes[1].childNodes[5]) {
+          localStorageProducts.splice(i, 1);
+
+          localStorage.setItem(
+            "usuarioProdutos",
+            JSON.stringify(localStorageProducts)
+          );
+          Template.cartTemplate(localStorageProducts, ulCarrinho);
+          ControllerHome.ProductsPriceUpdate();
+        }
       }
     }
   }
@@ -75,8 +84,14 @@ export class ControllerCart {
     await Template.cartTemplate(newProducts, ulCarrinho);
   }
 
-  static updatePrice() {
-    if (localStorage.length > 1) {
+  static updatePrice(quantityPlaceholder, pricePlaceholder) {
+    if (!localStorage.usuarioProdutos) {
+      let totalPrice = 0;
+      let quantity = 0;
+      let cartInfo = {};
+      cartInfo = { totalPrice, quantity };
+      return cartInfo;
+    } else {
       let localStorageProducts = JSON.parse(
         localStorage.getItem("usuarioProdutos")
       );
@@ -84,7 +99,7 @@ export class ControllerCart {
       localStorageProducts.forEach((products) =>
         arrayProductPrices.push(products.preco)
       );
-      let totalPrice = arrayProductPrices.reduce((x, y) => x + y);
+      let totalPrice = arrayProductPrices.reduce((x, y) => x + y, 0);
       let quantity = localStorageProducts.length;
       let cartInfo = {};
       cartInfo = { totalPrice, quantity };
