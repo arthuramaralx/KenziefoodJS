@@ -4,8 +4,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Admin</title>
-
-  
   <link rel="stylesheet" href="../style/admin.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -20,9 +18,9 @@
       </section>
 
       <section id="pesquisar">
-        <form>
+        
             <input type="text" placeholder="Pesquisar por um produto" id="btn-pesquisar">                    
-        </form>
+        
         <img src="../favicons/icon_user.png" class = "user-foto">
       </section>
   </nav>
@@ -39,7 +37,7 @@
         </ul>
     </div>
 
-    <div>
+    <div  class="div-btn-adicionarProduto">
         <ul>
             <li><button id="novo-produto">Adicionar novo produto</button></li>
         </ul>
@@ -111,7 +109,7 @@
           <label>Link da imagem</label>
           <input type="url" name="imagem" placeholder="Inserir link">
 
-          <div>
+          <div class="div-btn-cadastrar-produto">
             <button class="modal__formBotaoExcluir" type="reset">Excluir</button>
             <button class="modal__formBotaoSalvar" type="submit">Salvar alteração</button>
           </div>
