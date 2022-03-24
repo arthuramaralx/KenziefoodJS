@@ -105,28 +105,6 @@ export class ControllerCart {
       cartInfo = { totalPrice, quantity };
       return cartInfo;
     }
-
-    // if (JSON.parse(localStorage.getItem("usuarioProdutos")).length > 0) {
-    //   let localStorageProducts = JSON.parse(
-    //     localStorage.getItem("usuarioProdutos")
-    //   );
-    //   let arrayProductPrices = [];
-    //   localStorageProducts.forEach((products) =>
-    //     arrayProductPrices.push(products.preco)
-    //   );
-    //   let totalPrice = arrayProductPrices.reduce((x, y) => x + y);
-    //   let quantity = localStorageProducts.length;
-    //   let cartInfo = {};
-    //   cartInfo = { totalPrice, quantity };
-    //   return cartInfo;
-    // }
-    // if (JSON.parse(localStorage.getItem("usuarioProdutos")).length === 0) {
-    //   let totalPrice = 0;
-    //   let quantity = 0;
-    //   let cartInfo = {};
-    //   cartInfo = { totalPrice, quantity };
-    //   return cartInfo;
-    // }
   }
 
   static footerObserver() {
