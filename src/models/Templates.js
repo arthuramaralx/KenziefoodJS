@@ -50,7 +50,7 @@ export class Template {
 
           <section class="filter-and-price">
             <span class="filter">${categoria}</span>
-            <p class="price">R$ ${preco}</p>
+            <p class="price">R$ ${preco.toFixed(2)}</p>
           </section>
 
           <section class="amount-products-in-card">

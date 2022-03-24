@@ -1,5 +1,6 @@
 import { products } from "../script/script.js";
 import { Template } from "../models/Templates.js";
+import { ControllerHome } from "./ControllerHome.js";
 
 let arrayCart = [];
 let verificacao = false;
@@ -23,6 +24,7 @@ export class ControllerCart {
       });
       arrayCart.push(cartProductsTemplate);
       ControllerCart.itensLocal(cartProductsTemplate);
+      ControllerHome.ProductsPriceUpdate();
     }
   }
 
@@ -48,7 +50,7 @@ export class ControllerCart {
   }
 
   static async removeCart(event) {
-    if(event.target.className === "img-trash"){
+    if (event.target.className === "img-trash") {
 
 
 
@@ -56,21 +58,22 @@ export class ControllerCart {
       let selectedProductTrash = event.target.closest(".img-trash")
       console.log(selectedProduct)
       let cartUl = event.target.closest("ul").childNodes;
-      
+
       let localStorageProducts = JSON.parse(
         localStorage.getItem("usuarioProdutos")
-        );
-        
-        for (let i = 0; i < cartUl.length; i++) {
-          if (selectedProduct == cartUl[i].childNodes[1].childNodes[5]) {
-            localStorageProducts.splice(i, 1);
-            
-            localStorage.setItem(
-              "usuarioProdutos",
-              JSON.stringify(localStorageProducts)
-              );
-              Template.cartTemplate(localStorageProducts, ulCarrinho);
-            }
+      );
+
+      for (let i = 0; i < cartUl.length; i++) {
+        if (selectedProduct == cartUl[i].childNodes[1].childNodes[5]) {
+          localStorageProducts.splice(i, 1);
+
+          localStorage.setItem(
+            "usuarioProdutos",
+            JSON.stringify(localStorageProducts)
+          );
+          Template.cartTemplate(localStorageProducts, ulCarrinho);
+          ControllerHome.ProductsPriceUpdate();
+        }
       }
     }
   }
@@ -81,10 +84,11 @@ export class ControllerCart {
   static async reload() {
     let newProducts = JSON.parse(localStorage.getItem("usuarioProdutos"));
     await Template.cartTemplate(newProducts, ulCarrinho);
+    
   }
 
-  static updatePrice() {
-    if (localStorage.length > 1) {
+  static updatePrice(quantityPlaceholder, pricePlaceholder) {
+    if (JSON.parse(localStorage.getItem("usuarioProdutos")).length > 0) {
       let localStorageProducts = JSON.parse(
         localStorage.getItem("usuarioProdutos")
       );
@@ -94,6 +98,13 @@ export class ControllerCart {
       );
       let totalPrice = arrayProductPrices.reduce((x, y) => x + y);
       let quantity = localStorageProducts.length;
+      let cartInfo = {};
+      cartInfo = { totalPrice, quantity };
+      return cartInfo;
+    }
+    if (JSON.parse(localStorage.getItem("usuarioProdutos")).length === 0){
+      let totalPrice = 0;
+      let quantity = 0;
       let cartInfo = {};
       cartInfo = { totalPrice, quantity };
       return cartInfo;
