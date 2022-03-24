@@ -18,7 +18,8 @@ export class ControllerLogin {
       }
     }
     const result = await Api.loginApi(dataLogin);
-    if (result.status == "Error") {
+    console.log(result);
+    if (result.error) {
       alert("Usuario nao encontrado");
     } else {
       localStorage.clear();
