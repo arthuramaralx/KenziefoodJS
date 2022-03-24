@@ -1,82 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/reset.css" />
+    <title>Kenzie Food</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/style/style.css">
-  <link rel="stylesheet" href="./src/style/reset.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;600;900&display=swap"
-    rel="stylesheet">
-  <title>Kenzie Food</title>
-</head>
+  <body>
+    <header class="header-container">
+      <img
+        src="./src/favicons/icon_kenzie.png"
+        alt="logo-kenzie-food"
+        class="icon-logo"
+      />
+      <div>
+        <img
+          src="./src/favicons/search.png"
+          alt="search-icon"
+          class="icon-search"
+        />
+        <input
+          type="text"
+          class="input-search"
+          name="search"
+          placeholder="Pesquisar por produto"
+        />
+      </div>
+    </header>
+    <nav class="nav-container">
+      <button class="all-products">Todos</button>
+      <button class="bakery-products">
+        <img src="./src/favicons/icon_bread.png" alt="icon_bread-bakery" />
+        Panificadora
+      </button>
+      <button class="fruits-products">
+        <img src="./src/favicons/icon_fruit.png" alt="icon-fruits" />
+        Frutas
+      </button>
+      <button class="drinks-products">
+        <img src="./src/favicons/icon_wine.png" alt="icon-wine-drinks" />
+        Bebidas
+      </button>
+    </nav>
 
-<body>
-  <header class="header-container">
-    <img src="./src/favicons/icon_kenzie.png" alt="logo-kenzie-food" class="icon-logo" />
-    <div>
-      <img src="./src/favicons/search.png" alt="search-icon" class="icon-search" />
-      <input type="text" class="input-search" name="search" placeholder="Pesquisar por produto" />
+    <div class="opacity">
+      <aside class="card-container">
+        <section class="card-header">
+          <img src="./src/favicons/icon_card.png" alt="icon-card-header" />
+          Carrinho
+        </section>
+
+        <ul class="list-products">
+          <li>
+            <section class="picture-and-name">
+              <img
+                src="./src/favicons/img-teste.png"
+                alt="img-teste"
+                class="img-card"
+              />
+
+              <h2 class="title-product-card">Panqueca</h2>
+
+              <img
+                src="./src/favicons/trash.png"
+                alt="img-trash"
+                class="img-trash"
+              />
+            </section>
+
+            <section class="filter-and-price">
+              <span class="filter">Padaria</span>
+              <p class="price">R$ 20,00</p>
+            </section>
+
+            <section class="amount-products-in-card">
+              <p class="less">-</p>
+              <p class="amount">1</p>
+              <p class="more">+</p>
+            </section>
+
+            <div class="border"></div>
+          </li>
+
+          <li>
+            <section class="picture-and-name">
+              <img
+                src="./src/favicons/img-teste.png"
+                alt="img-teste"
+                class="img-card"
+              />
+
+              <h2 class="title-product-card">Panqueca</h2>
+
+              <img
+                src="./src/favicons/trash.png"
+                alt="img-trash"
+                class="img-trash"
+              />
+            </section>
+
+            <section class="filter-and-price">
+              <span class="filter">Padaria</span>
+              <p class="price">R$ 20,00</p>
+            </section>
+
+            <section class="amount-products-in-card">
+              <p class="less">-</p>
+              <p class="amount">1</p>
+              <p class="more">+</p>
+            </section>
+
+            <div class="border"></div>
+          </li>
+
+          <li>
+            <section class="picture-and-name">
+              <img
+                src="./src/favicons/img-teste.png"
+                alt="img-teste"
+                class="img-card"
+              />
+
+              <h2 class="title-product-card">Panqueca</h2>
+
+              <img
+                src="./src/favicons/trash.png"
+                alt="img-trash"
+                class="img-trash"
+              />
+            </section>
+
+            <section class="filter-and-price">
+              <span class="filter">Padaria</span>
+              <p class="price">R$ 20,00</p>
+            </section>
+
+            <section class="amount-products-in-card">
+              <p class="less">-</p>
+              <p class="amount">1</p>
+              <p class="more">+</p>
+            </section>
+
+            <div class="border"></div>
+          </li>
+
+          <li>
+            <section class="picture-and-name">
+              <img
+                src="./src/favicons/img-teste.png"
+                alt="img-teste"
+                class="img-card"
+              />
+
+              <h2 class="title-product-card">Panqueca</h2>
+
+              <img
+                src="./src/favicons/trash.png"
+                alt="img-trash"
+                class="img-trash"
+              />
+            </section>
+
+            <section class="filter-and-price">
+              <span class="filter">Padaria</span>
+              <p class="price">R$ 20,00</p>
+            </section>
+
+            <section class="amount-products-in-card">
+              <p class="less">-</p>
+              <p class="amount">1</p>
+              <p class="more">+</p>
+            </section>
+
+            <div class="border"></div>
+          </li>
+
+          <li>
+            <section class="picture-and-name">
+              <img
+                src="./src/favicons/img-teste.png"
+                alt="img-teste"
+                class="img-card"
+              />
+
+              <h2 class="title-product-card">Panqueca</h2>
+
+              <img
+                src="./src/favicons/trash.png"
+                alt="img-trash"
+                class="img-trash"
+              />
+            </section>
+
+            <section class="filter-and-price">
+              <span class="filter">Padaria</span>
+              <p class="price">R$ 20,00</p>
+            </section>
+
+            <section class="amount-products-in-card">
+              <p class="less">-</p>
+              <p class="amount">1</p>
+              <p class="more">+</p>
+            </section>
+
+            <div class="border"></div>
+          </li>
+        </ul>
+
+        <section class="card-body on">
+          <img src="./src/favicons/shopping-bag.png" alt="shopping-bag" />
+          <p>Por enquanto não temos produtos no carrinho</p>
+        </section>
+
+        <section class="amount-products on">
+          <p>Quantidade</p>
+          <p>10</p>
+        </section>
+
+        <section class="price-all-products on">
+          <p>Total</p>
+          <p>R$ 85,00</p>
+        </section>
+      </aside>
     </div>
-  </header>
-  <nav class="nav-container">
-    <button class="all-products">Todos</button>
-    <button class="bakery-products">
-      <img src="./src/favicons/icon_bread.png" alt="icon_bread-bakery" />
-      Panificadora
-    </button>
-    <button class="fruits-products">
-      <img src="./src/favicons/icon_fruit.png" alt="icon-fruits" />
-      Frutas
-    </button>
-    <button class="drinks-products">
-      <img src="./src/favicons/icon_wine.png" alt="icon-wine-drinks" />
-      Bebidas
-    </button>
-  </nav>
 
-  <div class="opacity">
-    <aside class="card-container">
+    <div class="template-container">
+      <ul></ul>
+    </div>
 
-      <section class="card-header">
-        <img src="./src/favicons/icon_card.png" alt="icon-card-header" />
-        Carrinho
-        <div class="exit">x</div>
-      </section>
+    <footer class="card-header-footer">
+      <img src="./src/favicons/icon_card.png" alt="icon-card-header" />
+      Carrinho
+    </footer>
 
-      <ul class="list-products">
-        
-      </ul>
-
-      <section class="card-body on">
-        <img src="./src/favicons/shopping-bag.png" alt="shopping-bag" />
-        <p>Por enquanto não temos produtos no carrinho</p>
-      </section>
-
-      <section class="amount-products on">
-        
-      </section>
-
-      <section class="price-all-products on">
-      
-      </section>
-    </aside>
-  </div>
-
-  <div class="template-container">
-    <ul></ul>
-  </div>
-
-  <footer class="card-header-footer">
-    <img src="./src/favicons/icon_card.png" alt="icon-card-header" />
-    Carrinho
-  </footer>
-
-  <script type="module" src="./src/script/script.js"></script>
-</body>
-
+    <script type="module" src="./src/script/script.js"></script>
+  </body>
 </html>
