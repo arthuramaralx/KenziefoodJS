@@ -1,12 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <titl>Kenzie Food - Admin</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Admin</title>
+
+  
+  <link rel="stylesheet" href="../style/admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
+
+  <header class="header-container">
+    <nav id="header-top">
+      <section id="logo-dashboard">
+          <img src="../favicons/icon_kenzie.png">
+      </section>
+
+      <section id="pesquisar">
+        <form>
+            <input type="text" placeholder="Pesquisar por um produto" id="btn-pesquisar">                    
+        </form>
+        <img src="../favicons/icon_user.png" class = "user-foto">
+      </section>
+  </nav>
+  </header>
+
+  <main>
+    <section class="btns-dashboard">
+    <div id="div-filtros">
+        <ul id="btn-filtros">
+            <li><button id="btn-todos">Todos</button></li>
+            <li><button id="btn-panificadora"><img class="icons-btn" src="../favicons/icon_bread.png"> Panificadora</button></li>
+            <li><button id="btn-frutas"><img class="icons-btn" src="../favicons/icon_fruit.png"> Frutas</button></li>
+            <li><button id="btn-bebidas"><img class="icons-btn" src="../favicons/icon_wine.png"> Bebidas</button></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><button id="novo-produto">Adicionar novo produto</button></li>
+        </ul>
+    </div>
+  </section>
+    <main>
+
+    <section id="listar-produtos">
+      
+
     
+  </section>
+  </main>
+
+  <section class="sectionModal sectionModal__cadastroProduto">
+    <nav class="modal__cadastroProduto modal__admin">
+      <header>
+        <p>Cadastro</p>
+        <button class="section__fecharmodal">X</button>
+      </header>
+        <form class="modal__formulario modal__formCadastro" id="form__cadastroProduto">
+          <label>Nome do Produto</label>
+          <input type="text" name="nome" placeholder="Digitar o nome">
+          <label>Descrição</label>
+          <input type="text" name="descricao" placeholder="Digitar a descrição">
+
+          <label>Categoria</label>
+          <!-- A ser feito quanto descobrir como realizar igual o figma -->
+          <select name="categoria" id="select__cadastroProduto">
+            <option disabled selected hidden value="">Escolher categoria</option>
+            <option value="Panificadora">Panificadora</option>
+            <option value="Frutas">Frutas</option>
+            <option value="Bebidas">Bebidas</option>
+          </select>
+
+          <label>Valor do Produto</label>
+          <input type="number" name="preco" placeholder="Digitar o valor aqui">
+          <label>Link da imagem</label>
+          <input type="url" name="imagem" placeholder="Inserir link">
+
+          <button>Cadastrar</button>
+        </form>
+    </nav>
+  </section>
+
+  <section class="sectionModal sectionModal__alterarProduto">
+    <nav class="modal__alterarProduto modal__admin">
+      <header>
+        <p>Alterar Produto</p>
+        <button>X</button>
+      </header>
+        <form class="modal__formulario modal__formEditar" id="form__editarProduto">
+          <label>Nome do Produto</label>
+          <input type="text" name="nome" placeholder="Digitar o nome">
+          <label>Descrição</label>
+          <input type="text" name="descricao" placeholder="Digitar a descrição">
+
+          <label>Categoria</label>
+          <!-- A ser feito quanto descobrir como realizar igual o figma -->
+          <select name="categoria" id="select__cadastroProduto">
+            <option disabled selected hidden value="">Escolher categoria</option>
+            <option value="Panificadora">Panificadora</option>
+            <option value="Frutas">Frutas</option>
+            <option value="Bebidas">Bebidas</option>
+          </select>
+
+          <label>Valor do Produto</label>
+          <input type="number" name="preco" placeholder="Digitar o valor aqui">
+          <label>Link da imagem</label>
+          <input type="url" name="imagem" placeholder="Inserir link">
+
+          <div>
+            <button class="modal__formBotaoExcluir" type="reset">Excluir</button>
+            <button class="modal__formBotaoSalvar" type="submit">Salvar alteração</button>
+          </div>
+        </form>
+    </nav>
+  </section>
+
+  <section class="sectionModal sectionModal__excluirProduto">
+    <nav class="modal__excluirProduto modal__admin">
+      <header>
+        <p>Exclusão de produto</p>
+        <button>X</button>
+      </header>
+      <form class="modal__formulario modal__formExcluir" id="form__excluirProduto">
+        <p>Tem certeza que deseja excluir este produto?</p>
+        <input id="modal__inputExcluirProduto" type="text" value="${produto.id}" hidden>
+
+        <div>
+          <button type="submit">Sim</button>
+          <h3><a href="./admin.html">Não</a></h3>
+        </div>
+
+      </form>
+    </nav>
+  </section>
+
+  <section class="section__status section__statusConfirmado">
+    <header>
+      <p>Status</p>
+      <button>X</button>
+    </header>
+    <p>Produto adicionado com sucesso</p>
+  </section>
+  
+  <section class="section__status section__statusRecusado ">
+    <header>
+      <p>Status</p>
+      <button>X</button>
+    </header>
+    <p>Ocorreu algum erro, o produto não foi adicionado</p>
+  </section>
+
+  <script type="module" src="../script/admin.js"></script>
 </body>
 </html>

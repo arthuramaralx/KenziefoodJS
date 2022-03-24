@@ -4,24 +4,24 @@ main {
   display: flex;
   justify-content: center;
 }
-.div-login {
+.div-register {
   margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-.div-login h3 {
+.div-register h3 {
   font-family: "Poppins", sans-serif;
   font-size: 46px;
   font-weight: 500;
 }
-.form-login {
+.form-register {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.form-login > input {
+.form-register > input {
   border: 1.5px solid #dee2e6;
   font-size: 18px;
   border-radius: 12px;
