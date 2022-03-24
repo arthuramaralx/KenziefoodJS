@@ -7,9 +7,8 @@ ControllerCart.observerCart();
 ControllerCart.onload();
 ControllerCart.footerObserver();
 
-
 let price = ControllerCart.updatePrice();
-console.log(price)
+// console.log(price);
 
 export const products = await Api.getPublicProducts();
 
@@ -19,9 +18,5 @@ ControllerHome.bakeryFilter(products, listatemplate);
 ControllerHome.fruitsFilter(products, listatemplate);
 ControllerHome.drinksFilter(products, listatemplate);
 ControllerHome.AllProductsFilter(products, listatemplate);
-ControllerHome.inputValue(products, listatemplate)
-ControllerHome.ProductsPriceUpdate();
-
-
-
-
+ControllerHome.inputValue(products, listatemplate);
+// ControllerHome.ProductsPriceUpdate();

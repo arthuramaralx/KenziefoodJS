@@ -51,12 +51,10 @@ export class ControllerCart {
 
   static async removeCart(event) {
     if (event.target.className === "img-trash") {
-
-
-
-      let selectedProduct = event.target.closest("li").childNodes[1].children[2];
-      let selectedProductTrash = event.target.closest(".img-trash")
-      console.log(selectedProduct)
+      let selectedProduct =
+        event.target.closest("li").childNodes[1].children[2];
+      let selectedProductTrash = event.target.closest(".img-trash");
+      // console.log(selectedProduct);
       let cartUl = event.target.closest("ul").childNodes;
 
       let localStorageProducts = JSON.parse(
@@ -84,11 +82,16 @@ export class ControllerCart {
   static async reload() {
     let newProducts = JSON.parse(localStorage.getItem("usuarioProdutos"));
     await Template.cartTemplate(newProducts, ulCarrinho);
-    
   }
 
   static updatePrice(quantityPlaceholder, pricePlaceholder) {
-    if (JSON.parse(localStorage.getItem("usuarioProdutos")).length > 0) {
+    if (!localStorage.usuarioProdutos) {
+      let totalPrice = 0;
+      let quantity = 0;
+      let cartInfo = {};
+      cartInfo = { totalPrice, quantity };
+      return cartInfo;
+    } else {
       let localStorageProducts = JSON.parse(
         localStorage.getItem("usuarioProdutos")
       );
@@ -96,19 +99,34 @@ export class ControllerCart {
       localStorageProducts.forEach((products) =>
         arrayProductPrices.push(products.preco)
       );
-      let totalPrice = arrayProductPrices.reduce((x, y) => x + y);
+      let totalPrice = arrayProductPrices.reduce((x, y) => x + y, 0);
       let quantity = localStorageProducts.length;
       let cartInfo = {};
       cartInfo = { totalPrice, quantity };
       return cartInfo;
     }
-    if (JSON.parse(localStorage.getItem("usuarioProdutos")).length === 0){
-      let totalPrice = 0;
-      let quantity = 0;
-      let cartInfo = {};
-      cartInfo = { totalPrice, quantity };
-      return cartInfo;
-    }
+
+    // if (JSON.parse(localStorage.getItem("usuarioProdutos")).length > 0) {
+    //   let localStorageProducts = JSON.parse(
+    //     localStorage.getItem("usuarioProdutos")
+    //   );
+    //   let arrayProductPrices = [];
+    //   localStorageProducts.forEach((products) =>
+    //     arrayProductPrices.push(products.preco)
+    //   );
+    //   let totalPrice = arrayProductPrices.reduce((x, y) => x + y);
+    //   let quantity = localStorageProducts.length;
+    //   let cartInfo = {};
+    //   cartInfo = { totalPrice, quantity };
+    //   return cartInfo;
+    // }
+    // if (JSON.parse(localStorage.getItem("usuarioProdutos")).length === 0) {
+    //   let totalPrice = 0;
+    //   let quantity = 0;
+    //   let cartInfo = {};
+    //   cartInfo = { totalPrice, quantity };
+    //   return cartInfo;
+    // }
   }
 
   static footerObserver() {
