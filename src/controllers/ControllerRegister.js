@@ -17,7 +17,7 @@ export class ControllerRegister {
       }
     }
     const result = await Api.registerApi(dataRegister);
-    if (result.status == "Error") {
+    if (result == "User Already Exists!") {
       alert("Usuario já existe");
     } else {
       window.location.href = "./login.html";

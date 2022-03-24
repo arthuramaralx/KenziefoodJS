@@ -1,13 +1,13 @@
 export class Template {
+  static sectionProducts = document.querySelector("#listar-produtos");
 
-  static sectionProducts = document.querySelector('#listar-produtos')
+  static async createTemplate(array, showCase) {
+    showCase.innerHTML = "";
+    array.forEach((item) => {
+      const { categoria, descricao, id, imagem, nome, preco } = item;
+      const liProducts = document.createElement("li");
+      liProducts.setAttribute("id", id);
 
-  static async createTemplate(array,showCase){
-    console.log(array)
-
-    array.forEach((item)=> {  
-      const {categoria, descricao, id, imagem, nome, preco} = item
-      const liProducts = document.createElement('li')
       liProducts.innerHTML = `
       
       <img src="${imagem}" alt="img-teste" class="img-item">
@@ -21,72 +21,72 @@ export class Template {
         <img src="./src/favicons/icon_card.png" alt="img-card" class="img-card">
       </div>
       
-      `
-      showCase.appendChild(liProducts)
-    })
-
+      `;
+      showCase.appendChild(liProducts);
+    });
   }
 
-  static async cartTemplate(array, showCase){
-   
-    array.forEach((item)=>{ 
-      const {imagem, nome, preco, categoria} = item
-      const liProducts = document.createElement('li')
+  static async cartTemplate(array, showCase) {
+    showCase.innerHTML = "";
+    array.forEach((item) => {
+      const { imagem, nome, preco, categoria } = item;
+      const liProducts = document.createElement("li");
       liProducts.innerHTML = `
-      <img src="${imagem}" alt="produto no carrinho">
-      <p>${nome}</p>
-      <span>${categoria}</span>
-      <p>${preco.toFixed(2)}</p>
-      showCase.appendChild(liProducts)
-      `
-    })
+      <section class="picture-and-name">
+            <img
+              src="${imagem}"
+              alt="img-teste"
+              class="img-card"
+            />
 
+            <h2 class="title-product-card">${nome}</h2>
+
+            <img
+              src="./src/favicons/trash.png"
+              alt="img-trash"
+              class="img-trash"
+            />
+          </section>
+
+          <section class="filter-and-price">
+            <span class="filter">${categoria}</span>
+            <p class="price">R$ ${preco}</p>
+          </section>
+
+          <section class="amount-products-in-card">
+            <p class="less">-</p>
+            <p class="amount">1</p>
+            <p class="more">+</p>
+          </section>
+
+          <div class="border"></div>
+      `;
+      showCase.appendChild(liProducts);
+    });
   }
-
   static async adminTemplate(array, showCase) {
-
-    const ulFixed = document.createElement('ul')
-    ulFixed.classList.add("menu-tabela-produtos")
+    const ulFixed = document.createElement("ul");
+    ulFixed.classList.add("menu-tabela-produtos");
     ulFixed.innerHTML = `
     <li class="products-table">Produtos</li>
     <li class="produtos-categorias">Categorias</li>
     <li class="produtos-descricao">Descrição</li>
     <li class="produtos-acoes">Ações</li>
-    `
-    this.sectionProducts.appendChild(ulFixed)
+    `;
+    this.sectionProducts.appendChild(ulFixed);
 
-    array.forEach((item) => { 
-      const {imagem, nome, categoria, descricao} = item
-      const ulProducts = document.createElement("ul")
-      ulProducts.classList.add("tabela-produtos")
+    array.forEach((item) => {
+      const { imagem, nome, categoria, descricao } = item;
+      const ulProducts = document.createElement("ul");
+      ulProducts.classList.add("tabela-produtos");
       ulProducts.innerHTML = `
       <li class="produtos-tabela"><img src="${imagem}"><p>${nome}</p></li>
       <li class="produtos-categorias">${categoria}</li>
       <li class="produtos-descricao">${descricao}</li>
       <li class="produtos-acoes"><img class="editProduct" src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li> 
-      `
+      `;
 
-      this.sectionProducts.appendChild(ulProducts)
-    })
+      this.sectionProducts.appendChild(ulProducts);
+    });
   }
-
 }
-
-{/* <ul class="menu-tabela-produtos">
-          <li class="produtos-tabela">Produtos</li>
-          <li class="produtos-categorias">Categorias</li>
-          <li class="produtos-descricao">Descrição</li>
-          <li class="produtos-acoes">Ações</li>
-      </ul>
-
-      <ul class="tabela-produtos">
-         <li class="produtos-tabela"><img src="./src/img/comida-img/teste.png"><p>Panqueca de banana com aveia</p></li>
-         <li class="produtos-categorias">bebidas frutas</li>
-         <li class="produtos-descricao">esta receita serve muito bem 2 pessoas...</li>
-         <li class="produtos-acoes"><img src="./src/img/vetores-btn/btn-editar.png"> <img src="./src/img/vetores-btn/btn-apagar.png" alt=""></li> */}
-
-
-       /*   <li class="products-table"><img src= "${imagem}" class="productImg"><p>${nome}</p></li>
-      <li class="produtos-categorias" id="greyText">${categoria}</li>
-      <li class="produtos-descricao" id="greyText">${descricao}</li>
-      <li class="produtos-acoes"><img class="editProduct" src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li> */
