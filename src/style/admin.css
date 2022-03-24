@@ -101,6 +101,14 @@ body {
 .div-btn-adicionarProduto {
   width: 100%;
 }
+.produtos-acoes-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.produtos-acoes-div > img {
+  padding: 10px;
+}
 
 #novo-produto {
   color: #ffffff;
@@ -499,126 +507,88 @@ ul {
   }
 }
 
-/* @media (min-width: 425px) {
-  .pesquisa__produtos {
-    width: 365px;
-    margin: 0px 5px 5px 130px;
+@media (min-width: 1024px) {
+  main {
+    margin: 0;
   }
-
-  #btn__cadastro {
-    left: 55px;
+  #header-top {
+    justify-content: space-between;
+    padding: 0 117px;
   }
-}
-
-@media (min-width: 768px) {
-  .registro__pesquisa {
-    height: 72px;
-    left: 0px;
-    top: 0px;
-    flex-direction: row-reverse;
+  .btns-dashboard {
+    flex-wrap: nowrap;
+  }
+  .div-btn-adicionarProduto {
+    justify-content: flex-end;
+  }
+  #div-filtros {
+    padding: 0 10%;
+  }
+  .menu-tabela-produtos > li {
+    width: 25%;
+    display: flex;
     justify-content: flex-start;
   }
-
-  #container__um {
-    width: 50px;
-    height: 150px;
+  .div-btn-adicionarProduto > ul {
+    margin: 0;
+    padding: 0 26%;
+  }
+  .div-btn-adicionarProduto {
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
   }
-
-  #container__dois {
-    width: 5px;
-    height: 45px;
-  }
-
-  .img__logo {
-    position: absolute;
-    height: 60px;
-    left: 22px;
-    top: 5px;
-  }
-
-  .pesquisa__produtos {
-    position: absolute;
-    width: 312px;
-    height: 40px;
-    left: 400px;
-    top: 15px;
-    margin: 0px;
-  }
-
-  #btn__cadastro {
-    top: 18px;
-    left: 3px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .pesquisa__produtos {
-    left: 650px;
-  }
-
-  #logo-dashboard {
-    margin-left: 117px;
-  }
-  #novo-produto {
-    margin-right: 118px;
-    padding: 15px 20px 15px 20px;
-  }
-
-  #div-filtros {
-    margin-left: 100px;
-  }
-  #btn-filtros li button {
-    margin-right: 28px;
-  }
-  #btn-todos {
-    padding: 15px 20px 15px 20px;
-  }
-  #btn-panificadora {
-    padding: 15px 20px 15px 20px;
-  }
-  #btn-frutas {
-    padding: 15px 20px 15px 20px;
-  }
-  #btn-bebidas {
-    padding: 15px 20px 15px 20px;
-  }
-
-  .btns-dashboard {
+  .menu-tabela-produtos {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 2%;
-    padding-top: 1%;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
   }
-  #logo-dashboard {
-    margin-left: 117px;
+  .tabela-produtos {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    height: 64px;
   }
-
+  .produtos-categorias {
+    align-items: center;
+  }
+  .products-table {
+    padding-left: 5%;
+  }
   .produtos-tabela {
+    min-width: 28%;
+  }
+
+  .produtos-categorias {
+    min-width: 15%;
+    justify-content: flex-start;
+  }
+  .produtos-descricao {
+    margin: 0;
+  }
+  .produtos-acoes {
+    padding-right: 1%;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end !important;
+  }
+  .produtos-acoes-icon {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: start;
-    width: 25%;
+    justify-content: space-around;
+  }
+  .produtos-acoes-div {
+    display: flex;
+    flex-direction: column;
+    min-width: 5%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .produtos-acoes-div > img {
+    width: 20px;
+  }
+  .produtos-descricao {
+    width: 100%;
   }
 }
-
-@media (min-width: 1440px) {
-  .pesquisa__produtos {
-    left: 1070px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .pesquisa__produtos {
-    left: 1230px;
-  }
-}
-
-@media (min-width: 2560px) {
-  .pesquisa__produtos {
-    left: 2180px;
-  }
-} */

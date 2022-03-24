@@ -83,7 +83,7 @@ export class Template {
       <li class="produtos-tabela"><img src="${imagem}"><p>${nome}</p></li>
       <li class="produtos-categorias">${categoria}</li>
       <li class="produtos-descricao">${descricao}</li>
-      <li class="produtos-acoes"><img class="editProduct" src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li> 
+      <li class="produtos-acoes-div" ><img class="editProduct" src="../favicons/icon_edit2.png"> <img src="../favicons/icon_exclude2.png" alt=""></li> 
       `;
 
       this.sectionProducts.appendChild(ulProducts);
