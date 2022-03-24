@@ -48,21 +48,29 @@ export class ControllerCart {
   }
 
   static async removeCart(event) {
-    let selectedProduct = event.target.closest("li");
-    let cartUl = event.target.closest("ul").childNodes;
-    let localStorageProducts = JSON.parse(
-      localStorage.getItem("usuarioProdutos")
-    );
+    if(event.target.className === "img-trash"){
 
-    for (let i = 0; i < cartUl.length; i++) {
-      if (selectedProduct == cartUl[i]) {
-        localStorageProducts.splice(i, 1);
 
-        localStorage.setItem(
-          "usuarioProdutos",
-          JSON.stringify(localStorageProducts)
+
+      let selectedProduct = event.target.closest("li").childNodes[1].children[2];
+      let selectedProductTrash = event.target.closest(".img-trash")
+      console.log(selectedProduct)
+      let cartUl = event.target.closest("ul").childNodes;
+      
+      let localStorageProducts = JSON.parse(
+        localStorage.getItem("usuarioProdutos")
         );
-        Template.cartTemplate(localStorageProducts, ulCarrinho);
+        
+        for (let i = 0; i < cartUl.length; i++) {
+          if (selectedProduct == cartUl[i].childNodes[1].childNodes[5]) {
+            localStorageProducts.splice(i, 1);
+            
+            localStorage.setItem(
+              "usuarioProdutos",
+              JSON.stringify(localStorageProducts)
+              );
+              Template.cartTemplate(localStorageProducts, ulCarrinho);
+            }
       }
     }
   }
