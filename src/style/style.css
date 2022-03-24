@@ -7,12 +7,13 @@
     header .icon-logo {
         width: 122px;
         height: 33px;
-        margin-top: 21px;
-        margin-left: 18px;
-        margin: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+
     }
     
     header .input-search {
+
         width: 300px;
         height: 49px;
         border-radius: 12px;
@@ -28,8 +29,9 @@
         border: none;
         outline: none;
     
-        font-size: 16px;
+        font-family: 'Inter', sans-serif;
         font-weight: 400;
+        font-size: 16px;
         line-height: 19px;
         color: #868E96;
     }   
@@ -72,6 +74,7 @@
         line-height: 19.36px;
         align-items: center;
         
+        font-family: 'Inter', sans-serif;
         font-size: 16px;
         font-weight: 500;
         
@@ -95,8 +98,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        font-family: 'Poppins', sans-serif;
         font-size: 17px;
-        font-weight: bold;
+        font-weight: 700;
         color: #FFFFFF;
         font-weight: 500;
 
@@ -104,7 +109,7 @@
         
         max-width: 380px;
         height: 60px;
-        width: 374px;
+        width: 375px;
         border-radius:0px 0px 12px 12px;
 
         cursor: pointer;
@@ -243,8 +248,9 @@
     .card-container .list-products li .title-product-card{
         width: 178px;
         height: 22px;
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
-        font-weight: bold;
+        font-weight: 500;
         line-height: 20px;
 
         margin-left: 13px;
@@ -259,6 +265,7 @@
 
     .card-container .list-products li .filter-and-price .filter {
         margin-bottom: 7px;
+        font-family: 'Poppins', sans-serif;
         font-size: 12px;
         color: #868E96;
     }
@@ -268,59 +275,34 @@
         font-weight: normal;
     }
 
-    .card-container .list-products li .amount-products-in-card{
+    .amount-products-in-card{
         display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: end;
-        margin-right: 5px;
-        margin-top: -20px;
-    }
-
-    .card-container .list-products li .border{
-        display: flex;
-        position: absolute;
-        margin-left: 255px;
-        margin-top: -27px;
-        border: 2px solid black;
-        height: 30px;
-        width: 80px;
-
         position: sticky;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        background-color: #E9ECEF ;
+        width: 80px;
+        height: 20px;
+        margin-left: 250px;
 
-        background-color: #868E96;
-        opacity: 0.1;
     }
     
     .card-container .list-products li .amount-products-in-card .less {
-        height: 20px;
-        width: 20px;
-        margin-top: -3px;
-        margin-right: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
-
+        font-family: 'Poppins', sans-serif;
         font-weight: bold;
-
         cursor: pointer;
+
     }
 
     .card-container .list-products li .amount-products-in-card .more {
-        height: 15px;
-        width: 20px;
-        margin-top: -3px;
-        margin-left: 10px;
-        padding-top: 2px;
-        padding-left: 5px;
-        padding-bottom: 3px;
-        padding-right: 5px;
-
+        font-family: 'Poppins', sans-serif;
         font-weight: bold;
-
         cursor: pointer;
     }
 
     .card-container .list-products li .amount-products-in-card .amount {
+        font-family: 'Poppins', sans-serif;
         font-weight: bold;
         font-size: 14px;
         color: #868E96;
@@ -356,6 +338,9 @@
         flex-direction: row;
         list-style: none;
         border: none;
+
+        font-family: 'Poppins', sans-serif;
+
     }
     
     .template-container ul li .img-item {
@@ -375,7 +360,7 @@
     .template-container ul li h2 {
         color: #000000;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 500;
         line-height: 27px;
     
     }
@@ -384,19 +369,21 @@
         color:#868E96;
         width: 290px;
         font-size: 14px;
-        font-weight: regular;
+        font-weight: 400;
         line-height: 24px;
     }
     
     .template-container ul li .span-filter{
         color:#868E96;
+        font-weight: 400;
+
         margin-top: 10px ;
         font-size: 12px;
     }
     
     .template-container ul li div {
         display: flex;
-        width: 100%;
+        width: 85%;
         justify-content: end;
     }
     
@@ -516,15 +503,20 @@
 }
 
 .opacity{
-    background-color: rgba(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
     
 }
 
 .card-container{
     margin-top: 150px;
+    width: 320px;
     margin-left: 77%;
     position: fixed;
 }
+
+
 
 
 .card-container .card-header {
@@ -546,6 +538,10 @@
 }
 
 .card-container .card-body {
+    display: none; /* ALTERAR PARA NONE QUANDO TIVER PRODUTOS E FLEX QUANDO NAO TIVER*/
+}
+
+.card-container .card-body {
     flex-direction: column;
     width: 320px;
     background-color: #F8F9FA;
@@ -564,7 +560,7 @@
 
 .card-container .amount-products,
 .card-container .price-all-products{
-    display: flex; /* ALTERAR PARA FLEX QUANDO TIVER PRODUTOS */
+    display: flex;/* ALTERAR PARA DISPLAY FLEX QUANDO TIVER PRODUTOS e NONE quando nao tiver produtos*/
     justify-content: space-between;
     align-items: center;
 
@@ -584,12 +580,17 @@
 }
 
 .card-container .list-products {
-    display: absolute;
+    display: absolute; /* ALTERAR PARA DISPLAY absolute QUANDO TIVER PRODUTOS e NONE quando nao tiver produtos*/
+    width: 320px;
     height: 300px;
     max-height:300px ;
-    margin-top: 20px;
+    margin-top: 21px;
     padding-top: 20px;
     background-color: white;
+}
+
+.card-container .list-products::-webkit-scrollbar {
+    overflow:hidden;
 }
 
 .card-container .list-products li{
@@ -649,27 +650,14 @@
     justify-content: end;
     margin-right: 5px;
     margin-top: -20px;
+
 }
 
-.card-container .list-products li .border{
-    display: flex;
-    position: absolute;
-    margin-left: 240px;
-    margin-top: -27px;
-    border: 2px solid black;
-    height: 30px;
-    width: 80px;
-
-    position: sticky;
-    
-    background-color: #868E96;
-    opacity: 0.1;
-}
 
 .card-container .list-products li .amount-products-in-card .less {
     height: 20px;
     width: 20px;
-    margin-top: -3px;
+    margin-top: 3px;
     margin-right: 10px;
     padding-left: 5px;
     padding-right: 5px;
@@ -682,7 +670,6 @@
 .card-container .list-products li .amount-products-in-card .more {
     height: 15px;
     width: 20px;
-    margin-top: -3px;
     margin-left: 10px;
     padding-top: 2px;
     padding-left: 5px;
@@ -695,7 +682,7 @@
 }
 
 .card-container .list-products li .amount-products-in-card .amount {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 14px;
     color: #868E96;
 }
@@ -768,15 +755,9 @@
     font-size: 12px;
 }
 
-.template-container ul li div {
-    display: flex;
-    width: 100%;
-    justify-content: end;
-}
-
 .template-container ul li div img {
     background-color:#E4F7EF;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -787,6 +768,8 @@
 .template-container ul li div p {
     font-size: 14px;
     color: #212529;
+
+    margin-top: 27px;
 
     height: 20px;
     width: 70px;
