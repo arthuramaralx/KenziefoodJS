@@ -18,7 +18,7 @@ export class Template {
       <span class="span-filter">${categoria}</span>
       <div>
         <p>R$ ${preco.toFixed(2)}</p>
-        <img src="./src/favicons/icon_card.png" alt="img-card" class="img-card">
+        <img src="./src/favicons/Button_Circle.png" alt="img-card" class="img-card">
       </div>
       
       `;

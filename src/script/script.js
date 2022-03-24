@@ -1,16 +1,14 @@
 import { Template } from "../models/Templates.js";
 import { Api } from "../api/Api.js";
 import { ControllerCart } from "../controllers/ControllerCart.js";
-import { ControllerFilters } from "../controllers/ControllerFilters.js";
 import { ControllerHome } from "../controllers/ControllerHome.js";
 ControllerCart.observerUl();
 ControllerCart.observerCart();
 ControllerCart.onload();
 ControllerCart.footerObserver();
 
-
 let price = ControllerCart.updatePrice();
-console.log(price)
+// console.log(price);
 
 export const products = await Api.getPublicProducts();
 
@@ -20,8 +18,5 @@ ControllerHome.bakeryFilter(products, listatemplate);
 ControllerHome.fruitsFilter(products, listatemplate);
 ControllerHome.drinksFilter(products, listatemplate);
 ControllerHome.AllProductsFilter(products, listatemplate);
-ControllerHome.ProductsPriceUpdate();
-
-
-
-
+ControllerHome.inputValue(products, listatemplate);
+// ControllerHome.ProductsPriceUpdate();
