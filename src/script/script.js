@@ -10,7 +10,7 @@ ControllerCart.footerObserver();
 
 
 let price = ControllerCart.updatePrice();
-
+console.log(price)
 
 export const products = await Api.getPublicProducts();
 
@@ -20,6 +20,8 @@ ControllerHome.bakeryFilter(products, listatemplate);
 ControllerHome.fruitsFilter(products, listatemplate);
 ControllerHome.drinksFilter(products, listatemplate);
 ControllerHome.AllProductsFilter(products, listatemplate);
+ControllerHome.ProductsPriceUpdate();
 
-// ControllerFilters.filterPadaria(products, listatemplate)
+
+
 
