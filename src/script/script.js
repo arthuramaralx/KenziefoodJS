@@ -8,7 +8,13 @@ ControllerCart.onload();
 ControllerCart.footerObserver();
 
 let price = ControllerCart.updatePrice();
-// console.log(price);
+
+const btnAdm = document
+  .querySelector(".adm-button-login")
+  .addEventListener(
+    "click",
+    () => (window.location.href = "./src/pages/login.html")
+  );
 
 export const products = await Api.getPublicProducts();
 
@@ -19,4 +25,3 @@ ControllerHome.fruitsFilter(products, listatemplate);
 ControllerHome.drinksFilter(products, listatemplate);
 ControllerHome.AllProductsFilter(products, listatemplate);
 ControllerHome.inputValue(products, listatemplate);
-// ControllerHome.ProductsPriceUpdate();

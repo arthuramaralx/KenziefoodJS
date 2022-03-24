@@ -17,7 +17,7 @@ export class Template {
       </span>
       <span class="span-filter">${categoria}</span>
       <div>
-        <p>R$ ${preco.toFixed(2)}</p>
+        <p id="preco-template-principal">R$ ${preco.toFixed(2)}</p>
         <img src="./src/favicons/Button_Circle.png" alt="img-card" class="img-card">
       </div>
       
@@ -27,6 +27,9 @@ export class Template {
   }
 
   static async cartTemplate(array, showCase) {
+    if (array == null) {
+      return;
+    }
     showCase.innerHTML = "";
     array.forEach((item) => {
       const { imagem, nome, preco, categoria } = item;

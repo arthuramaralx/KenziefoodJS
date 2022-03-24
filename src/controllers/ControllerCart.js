@@ -16,9 +16,10 @@ export class ControllerCart {
   }
 
   static async addCart(event) {
-    if (event.target.closest("li")) {
+    if (
+      event.target === event.target.closest("li").childNodes[9].lastElementChild
+    ) {
       let idTarget = await Number(event.target.closest("li").id);
-
       let cartProductsTemplate = products.find((item) => {
         return item.id == idTarget;
       });
@@ -30,6 +31,10 @@ export class ControllerCart {
 
   static async itensLocal(item) {
     let novosItens;
+    if (localStorage.tokenUsuario) {
+      localStorage.clear();
+    }
+
     if (localStorage.length == 0) {
       localStorage.setItem("usuarioProdutos", JSON.stringify(arrayCart));
     } else if (localStorage.length > 0) {
@@ -50,17 +55,16 @@ export class ControllerCart {
   }
 
   static async removeCart(event) {
+    const x = document.querySelector(".list-products");
     if (event.target.className === "img-trash") {
       let selectedProduct =
         event.target.closest("li").childNodes[1].children[2];
       let selectedProductTrash = event.target.closest(".img-trash");
-      // console.log(selectedProduct);
       let cartUl = event.target.closest("ul").childNodes;
 
       let localStorageProducts = JSON.parse(
         localStorage.getItem("usuarioProdutos")
       );
-
       for (let i = 0; i < cartUl.length; i++) {
         if (selectedProduct == cartUl[i].childNodes[1].childNodes[5]) {
           localStorageProducts.splice(i, 1);
